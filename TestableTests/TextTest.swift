@@ -54,11 +54,18 @@ class TextTest: XCTestCase {
         text.set("My Stack is full")
         XCTAssertEqual(text.words()[1], "Stack")
     }
+    
+    func testReversedWords() {
+        text.set("This is my awesome test")
+        let words = text.words()
+        XCTAssertEqual(text.reversedWordsOrder()[1], words[3])
+    }
 
     func testPerformanceExample() {
+        text.set("Unit tests are awesome")
         // This is an example of a performance test case.
         self.measure {
-            // Put the code you want to measure the time of here.
+             _ = text.reversed()
         }
     }
 

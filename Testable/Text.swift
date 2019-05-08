@@ -37,5 +37,9 @@ class Text: NSObject {
             return String($0)
         }
     }
+    
+    func reversedWordsOrder() -> [String] {
+        return words().reversed()
+    }
 
 }
